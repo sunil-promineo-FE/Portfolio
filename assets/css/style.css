@@ -1,0 +1,116 @@
+:root {
+    --primary: #0d6efd;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 80px 0;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 50vh;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+.rounded-circle {
+    width: 260px;
+    height: 260px;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    text-align: right;
+    z-index: 10;
+}
+
+.profile-pic-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-pic-wrapper img {
+    border: 5px solid transparent; /* Add space for the gradient */
+    border-radius: 50%; /* Ensure the image remains circular */
+    background: linear-gradient(white, white) padding-box, 
+                conic-gradient(#28a745 0%, #28a745 25%, transparent 25%, transparent 100%) border-box;
+}
+
+.open-to-work-strip {
+    background-color: rgba(40, 167, 69, 0.9); /* Semi-transparent green */
+    border-radius: 20px; /* Rounded edges */
+    font-size: 0.8rem; /* Adjust font size */
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 10px; /* Add padding for better spacing */
+    position: absolute;
+    bottom: -15px; /* Position below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase; /* Make text uppercase */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.contact-info {
+    font-size: 0.9rem; /* Adjust font size */
+    line-height: 1.5; /* Add spacing between lines */
+    text-align: right; /* Align text to the right */
+}
+
+.contact-info a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
